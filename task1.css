@@ -1,3 +1,5 @@
+/* task1 */
+
 #container{
     height: 400px;
     width: 40%;
@@ -6,13 +8,40 @@
     text-align: center;
     align-items: center;
 }
-table{
+#container table{
     height: 100%;
     width: 100%;
     text-align: center;
     /* border: 2px solid black; */
 }
-table, th, td{
+#container table, th, td{
     border-bottom: 1px solid black;
     border-collapse: collapse;
+}
+
+/* task2 */
+h1{
+    text-align: center;
+}
+
+#divselect{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: auto;
+    margin-top: 2%;
+}
+#divselect, select, button, input{
+    height: 10%;
+    width: 50%;
+}
+#divsearch{
+    width: 50%;
+    margin:auto;
+}
+#searchtable{
+    width: 100%;
+    text-align: center;
 }
