@@ -1,0 +1,18 @@
+#container{
+    height: 400px;
+    width: 40%;
+    margin: auto;
+    /* background-color: green; */
+    text-align: center;
+    align-items: center;
+}
+table{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    /* border: 2px solid black; */
+}
+table, th, td{
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+}
