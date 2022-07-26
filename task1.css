@@ -45,3 +45,17 @@ h1{
     width: 100%;
     text-align: center;
 }
+
+/* task 3 */
+#divsort{
+    height: 50px;
+    width: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: auto;
+    margin-top: 5%;
+}
+#divsort select{
+    width: 50%;
+    height: 50%;
+}
