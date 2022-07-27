@@ -64,19 +64,23 @@ h1{
 /* task 4 */
 
 #newdetailsdiv{
-    height: 200px;
-    width: 50%;
+    height: 250px;
+    width: 100%;
     margin: auto;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 25%;
 }
 #newdetailsdiv input {
     height: 10%;
-    width: 90%;
+    width: 50%;
 }
 #newdetailsdiv, label{
     text-align: left;
 }
 #btn{
     margin-top: 1%;
-    width: 91.5%;
+    width: 10%;
 }
