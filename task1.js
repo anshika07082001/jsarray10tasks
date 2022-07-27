@@ -150,11 +150,17 @@ if(selectsort1==2){
 // task4
 function newdetails(){
     var company = document.getElementById('inputcompany').value;
-var model = document.getElementById('inputmodel').value;
-var memory = document.getElementById('inputmemory').value;
-var price = document.getElementById('inputprice').value;
+    var model = document.getElementById('inputmodel').value;
+    var memory = document.getElementById('inputmemory').value;
+    var price = document.getElementById('inputprice').value;
 
     const arra = {Company:company,Model:model,Memory:memory,Price:price};
-    arr.push(arra);
+    arr.splice(2,0,arra);
     populate();
+    document.getElementById('inputcompany').value="";
+    document.getElementById('inputmodel').value="";
+    document.getElementById('inputmemory').value="";
+    document.getElementById('inputprice').value="";
 }
+
+
