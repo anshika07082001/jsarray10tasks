@@ -182,6 +182,8 @@ function populateGenerate(tempArr)
     document.getElementById('addBill').innerHTML=text;    
 }
 function addSelect(){
+    // document.getElementById('productInput').innerHTML="";
+    // document.getElementById('selectProductBill').innerHTML="--Select Product--";
     inputQuantity = document.getElementById('productInput').value;
     var selectedproduct = document.getElementById('selectProductBill').selectedIndex;
     value1 = document.getElementById('selectProductBill').value;
@@ -221,12 +223,10 @@ function addSelect(){
         }
         if(selectedproduct==2){
             sum1=inputQuantity*arr[1].Price;
-            // if(arr[selectedproduct-1].Quantity<inputQuantity){
-            //     document.getElementById('error').innerHTML="";
-            // }
-            if(0){
-
+            if(arr[selectedproduct-1].Quantity<inputQuantity){
+                document.getElementById('error').innerHTML="";
             }
+            if(0){}
             else{
                 arr[selectedproduct-1].Quantity-=inputQuantity;
                 arradd = {Company:value1,Quantity:inputQuantity,Amount:sum1};
@@ -237,9 +237,9 @@ function addSelect(){
         }
             if(selectedproduct==3){
             sum1=inputQuantity*arr[2].Price;
-            // if(arr[selectedproduct-1].Quantity<inputQuantity){
-            //     document.getElementById('error').innerHTML="";
-            // }
+            if(arr[selectedproduct-1].Quantity<inputQuantity){
+                document.getElementById('error').innerHTML="";
+            }
             if(0){}
             else{
                 arr[selectedproduct-1].Quantity-=inputQuantity;
@@ -251,9 +251,9 @@ function addSelect(){
         }
             if(selectedproduct==4){
             sum1=inputQuantity*arr[3].Price;
-            // if(arr[selectedproduct-1].Quantity<inputQuantity){
-            //     document.getElementById('error').innerHTML="";
-            // }
+            if(arr[selectedproduct-1].Quantity<inputQuantity){
+                document.getElementById('error').innerHTML="";
+            }
             if(0){}
             else{
                 arr[selectedproduct-1].Quantity-=inputQuantity;
@@ -265,9 +265,9 @@ function addSelect(){
          }   
          if(selectedproduct==5){
             sum1=inputQuantity*arr[4].Price;
-            // if(arr[selectedproduct-1].Quantity<inputQuantity){
-            //     document.getElementById('error').innerHTML="";
-            // }
+            if(arr[selectedproduct-1].Quantity<inputQuantity){
+                document.getElementById('error').innerHTML="";
+            }
             if(0){}
             else{
                 arr[selectedproduct-1].Quantity-=inputQuantity;
@@ -326,4 +326,26 @@ function deleteCheck(){
     populate();
 }
 
+// task 8
 
+var opts = document.getElementById('selectUpdate');
+    for(i=0;i<arr.length;i++){
+        var opt = arr[i].Company+"  "+ arr[i].Model;
+        var opts1 = document.createElement('option');
+        opts1.textContent=opt;
+        opts.appendChild(opts1);
+    }
+function btnUpdate(){
+    var Updinput = document.getElementById('productUpdate').value;
+    var selectProduct = document.getElementById('selectUpdate').selectedIndex;
+    value2 = document.getElementById('selectUpdate').value;
+    var splitArr=value2.split(" ");
+    var val=splitArr[0];
+    for(i=0;i<arr.length;i++){
+        if(arr[i].Company==val)
+        {
+            arr[i].Quantity=Updinput;  
+        }
+     }
+    populate();
+}
