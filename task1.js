@@ -1,17 +1,17 @@
-var arr = [{Company:"Samsung",Model:"Galaxy",Memory:64,Price:15000,Quantity:30},
-{Company:"Nokia",Model:"S730",Memory:128,Price:22000,Quantity:20},
-{Company:"Xiomi",Model:"Note",Memory:32,Price:12000,Quantity:10},
-{Company:"Motorola",Model:"G10",Memory:32,Price:15000,Quantity:20},
-{Company:"Apple",Model:"S12",Memory:64,Price:25000,Quantity:30}];
+var arr = [{Company:"Samsung",Model:"Galaxy",Memory:64,Price:15000,Quantity:30,Rating:""},
+{Company:"Nokia",Model:"S730",Memory:128,Price:22000,Quantity:20,Rating:""},
+{Company:"Xiomi",Model:"Note",Memory:32,Price:12000,Quantity:10,Rating:""},
+{Company:"Motorola",Model:"G10",Memory:32,Price:15000,Quantity:20,Rating:""},
+{Company:"Apple",Model:"S12",Memory:64,Price:25000,Quantity:30,Rating:""}];
 design();
 
 function populate(){
     var text="";
     
-text += "<table><tr><th>Company</th><th>Model</th><th>Memory (GB)</th><th>Price (Rs)</th><th>Quantity</th><th>Action</th></tr>";
+text += "<table><tr><th>Company</th><th>Model</th><th>Memory (GB)</th><th>Price (Rs)</th><th>Quantity</th><th>Action</th><th>Rating</th></tr>";
 for(i=0;i<arr.length;i++){
     text += "<tr><td>"+arr[i].Company+"</td><td>"+arr[i].Model+"</td><td>"+arr[i].Memory+"</td><td>"
-    +arr[i].Price+"</td><td>"+arr[i].Quantity+"</td><td>"+"<input type='checkbox' id='entryDelete' onclick='selectCheck(this)'>"+"</td></tr>"
+    +arr[i].Price+"</td><td>"+arr[i].Quantity+"</td><td>"+"<input type='checkbox' id='entryDelete' onclick='selectCheck(this)'>"+"</td><td>"+arr[i].Rating+"</td></tr>"
 }
 text += "</table>";
 document.getElementById('container').innerHTML=text;
@@ -19,7 +19,7 @@ document.getElementById('container').innerHTML=text;
 
 function design(args){
 var text="";
-text += "<table><tr><th>Company</th><th>Model</th><th>Memory (GB)</th><th>Price (Rs)</th><th>Quantity</th><th>Action</th></tr>";
+text += "<table><tr><th>Company</th><th>Model</th><th>Memory (GB)</th><th>Price (Rs)</th><th>Quantity</th><th>Action</th><th>Rating</th></tr>";
 for(i=0;i<arr.length;i++){
     text += "<tr><td>"+arr[i].Company+"</td><td>"+arr[i].Model+"</td><td>"+arr[i].Memory+"</td><td>"
     +arr[i].Price+"</td><td>"+arr[i].Quantity+"</td><td>"+"<input type='checkbox' id='entryDelete' onclick='selectCheck(this)'>"+"</td></tr>";
@@ -337,7 +337,6 @@ var opts = document.getElementById('selectUpdate');
     }
 function btnUpdate(){
     var Updinput = document.getElementById('productUpdate').value;
-    var selectProduct = document.getElementById('selectUpdate').selectedIndex;
     value2 = document.getElementById('selectUpdate').value;
     var splitArr=value2.split(" ");
     var val=splitArr[0];
@@ -349,3 +348,33 @@ function btnUpdate(){
      }
     populate();
 }
+
+
+// task 9
+
+var opts = document.getElementById('selectProdRate');
+    for(i=0;i<arr.length;i++){
+        var opts1 = document.createElement('option');
+        opts1.textContent=arr[i].Company;
+        opts.appendChild(opts1);
+    }
+
+const numarr = [1,2,3,4,5];
+var opts = document.getElementById('selectRate');
+for(i=0;i<numarr.length;i++){
+    var opts1 = document.createElement('option');
+    opts1.textContent=numarr[i];
+    opts.appendChild(opts1);
+}
+function Rating(){
+    value3 = document.getElementById('selectProdRate').value;
+    value4 = document.getElementById('selectRate').value;
+    for(i=0;i<arr.length;i++){
+        if(arr[i].Company==value3)
+            {
+                arr[i].Rating=value4;
+            }
+    }
+    populate();
+}
+
