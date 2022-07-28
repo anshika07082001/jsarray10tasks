@@ -139,3 +139,21 @@ h1{
     float: right;
     margin-right: 28%;
 }
+
+
+/* task 8 */
+
+#divUpdate{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+#selectUpdate, #productUpdate,#updateBtn{
+    width: 20%;
+    margin: 1%;
+    border-radius: 2px;
+    height: auto;
+
+}
