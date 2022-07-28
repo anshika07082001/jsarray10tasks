@@ -71,7 +71,7 @@ h1{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-left: 25%;
+    /* margin-left: 25%; */
 }
 #newdetailsdiv input {
     height: 10%;
@@ -83,4 +83,59 @@ h1{
 #btn{
     margin-top: 1%;
     width: 10%;
+}
+
+/* task5 */
+#generateBill{
+    height: 60px;
+    width: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+}
+#productInput, #selectProductBill{
+    width: 20%;
+    margin: 1%;
+    border-radius: 2px;
+    height: auto;
+}
+#addBtn{
+    width: 10%;
+    margin: 1%;
+    height: auto;
+    border-radius: 2px;
+}
+#generateBtn{
+    width: 20%;
+    margin: 1%;
+    height: auto;
+    border-radius: 2px;
+    display: block;
+}
+#divadd{
+    height: 200px;
+    width: 100%;
+    /* background-color: yellow; */
+}
+#addBill {
+    height: auto;
+    width: 50%;
+}
+
+
+/* task6  */
+
+#entryDelete{
+    height: 20%;
+    width: 30%;
+}
+
+
+#deleteBtn{
+    height: 40%;
+    width: 10%;
+    float: right;
+    margin-right: 28%;
 }
