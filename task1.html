@@ -9,7 +9,6 @@
 </head>
 <body>
     <div id="container">
-
     </div>
     <button id="deleteBtn" onclick="deleteCheck()">Delete</button>
     <div id="divselect">
@@ -51,39 +50,26 @@
         <input id="inputprice" required type="number">
         <button id="btn" onclick="newdetails()">Add</button>
     </div>
-    <div id="generateBill">
-        <select id="selectProductBill">
-            <option>--Select Product--</option>
-        </select>
-        <input placeholder="Quantity" id="productInput">
-        <button id="addBtn" onclick="addSelect()">Add</button>
-        <button id="generateBtn" onclick="generatebill()">Generate bill</button>
-</div>
-        <div id="divadd">
-            <table id="addBill">
-                <tr><th>Description</th><th>Quantity</th><th>Amount</th></tr>
-            </table>
-            <p id="error"></p>
-            
-        </div>
-
         <div id="divUpdate">
             <select id="selectUpdate">
-                <option>--Select Product--</option>
             </select>
             <input id="productUpdate" type="number">
             <button id="updateBtn" onclick="btnUpdate()">Update</button>
         </div>
         <div id="divRate">
-            <select id="selectProdRate">
-                <option>--Select Product--</option>
-            </select>
-            <select id="selectRate">
-                <option>-Select Rating-</option>
-            </select>
+            <select id="selectProdRate"></select>
+            <select id="selectRate"><option>-Select Rating-</option></select>
             <button id="btnRate" onclick="Rating()">Rate</button>
         </div>
-    
+        <div id="minMaxDiv">
+            <input id="minInput" type="number" placeholder="Minimum Price">
+            <input id="maxInput" type="number" placeholder="Maximum Price">
+            <button id="minMaxBtn" onclick="minMaxSearch()">Search</button>
+        </div>
+        <div id="divMinMaxTable">
+            <table id="tableRen"></table>
+            <p id="error1"></p>
+        </div>
     <script src="task1.js"></script>
 </body>
 </html>
