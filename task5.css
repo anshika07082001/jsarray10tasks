@@ -1,0 +1,42 @@
+#dispTable{
+    height: 300px;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+
+#container{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+#productInput, #selectProductBill{
+    width: 20%;
+    margin: 1%;
+    border-radius: 2px;
+    height: auto;
+}
+#addBtn{
+    width: 10%;
+    margin: 1%;
+    height: auto;
+    border-radius: 2px;
+}
+#generateBtn{
+    width: 20%;
+    margin: 1%;
+    height: auto;
+    border-radius: 2px;
+    display: block;
+}
+#divadd{
+    height: 200px;
+    width: 100%;
+}
+#addBill {
+    height: auto;
+    width: 50%;
+}
